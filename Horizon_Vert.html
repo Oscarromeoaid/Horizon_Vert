@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon Vert - Agriculture innovante au Togo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" integrity="sha512-ye/6R7j8/0W2r+k2r2MVoE1L4vP9PUN9y1Z69O1WUs6QXg9V1C6p3iKXjWyLiw0Q0+YaV4BmgcD0/Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script type="importmap">
+      </script>
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --primary-dark: #27ae60;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --danger: #e74c3c;
+            --warning: #f39c12;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            text-transform: capitalize;
+        }
+
+        .section-title h2 span {
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            background-color: var(--light);
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+
+            padding: 15px 0;
+            color: black;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            object-fit: cover;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            color:black
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: var(--dark);
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .hamburger span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger span:nth-child(2) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(3) {
+            top: 20px;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            transform: rotate(135deg);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+            left: -30px;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            top: 10px;
+            transform: rotate(-135deg);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+            
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        /* Technology Section */
+        .technology {
+            background: linear-gradient(rgba(46, 204, 113, 0.1), rgba(46, 204, 113, 0.1));
+        }
+
+        .tech-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tech-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .tech-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .tech-card:hover .tech-img img {
+            transform: scale(1.1);
+        }
+
+        .tech-content {
+            padding: 20px;
+        }
+
+        .tech-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* Products Section */
+        .products {
+            background: white;
+        }
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .product-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        /* Team Section */
+        .team {
+            background: #f9f9f9;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .member-img img {
+            transform: scale(1.1);
+        }
+
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .member-info p {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: white;
+        }
+
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-slide {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: none;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+            animation: fadeIn 1s ease;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--primary);
+            opacity: 0.5;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .testimonial-nav span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-nav span.active {
+            background: var(--primary);
+        }
+
+        .pricing-section {
+        background-color: #f9f9f9;
+        padding: 100px 0;
+    }
+
+    .pricing-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .pricing-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+        transition: all 0.3s ease;
+        border: 1px solid #e0e0e0;
+    }
+
+    .pricing-card.popular {
+        border: 2px solid var(--primary);
+        transform: scale(1.02);
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .popular-badge {
+        position: absolute;
+        top: -15px;
+        right: 20px;
+        background: var(--primary);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+    }
+
+    .pricing-header {
+        text-align: center;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .pricing-header h3 {
+        color: var(--dark);
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 5px;
+    }
+
+    .price span {
+        font-size: 1rem;
+        color: #666;
+        font-weight: 400;
+    }
+
+    .savings {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .pricing-features {
+        margin-bottom: 30px;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .feature i {
+        color: var(--primary);
+        margin-right: 10px;
+        font-size: 1.1rem;
+    }
+
+    .pricing-benefits {
+        background: #f5f9f7;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+
+    .benefit-card {
+        margin-bottom: 15px;
+    }
+
+    .benefit-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .benefit-card h4 {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        color: var(--dark);
+    }
+
+    .benefit-card h4 i {
+        margin-right: 8px;
+    }
+
+    .benefit-card.client h4 i {
+        color: #3498db;
+    }
+
+    .benefit-card.business h4 i {
+        color: #2ecc71;
+    }
+
+    .benefit-card p {
+        font-size: 0.9rem;
+        color: #666;
+        padding-left: 25px;
+    }
+
+    .btn-solid {
+        background: var(--primary);
+        color: white;
+        padding: 12px 30px; /* Plus large pour mieux centrer */
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-align: center;
+        display: inline-block; /* Permet un centrage correct */
+        width: auto; /* Annule le width: 100% */
+        max-width: 90%; /* Empêche le bouton de toucher les bords */
+    }
+
+    /* Conserve tous vos autres styles existants */
+    .btn-solid:hover {
+        background: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
+    }
+
+    .pricing-footer {
+        margin-top: 50px;
+        text-align: center;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .pricing-footer i {
+        color: var(--primary);
+        margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .pricing-cards {
+            grid-template-columns: 1fr;
+        }
+        
+        .pricing-card.popular {
+            transform: none;
+        }
+    }
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(rgba(46, 204, 113, 0.1), rgba(46, 204, 113, 0.1));
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        /* Training Section */
+.training {
+    background: #f9f9f9;
+}
+
+.training-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.training-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.training-content p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.training-features {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.training-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.training-features li i {
+    color: var(--primary);
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.training-form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.training-form-container h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.training-form .form-group {
+    margin-bottom: 15px;
+}
+
+.training-form input,
+.training-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+.training-form input:focus,
+.training-form select:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.training-form .btn-solid {
+    width: 100%;
+    text-align: center;
+}
+
+.iti.iti--allow-dropdown {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .training-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .training-content h3,
+    .training-form-container h3 {
+        font-size: 1.4rem;
+    }
+
+    .training-form-container {
+        padding: 15px;
+    }
+}
+
+        /* FAQ Section */
+.faq {
+    background: white;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    background: white;
+    transition: var(--transition);
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+.faq-question .faq-icon {
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust based on content length */
+    padding: 20px;
+}
+
+.faq-answer p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.faq-cta {
+    margin-top: 40px;
+}
+
+.faq-cta p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Popup Offer */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popup-overlay.active {
+    display: flex;
+    opacity: 1;
+    animation: fadeInOverlay 0.5s ease-in-out;
+}
+
+.popup-content {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--shadow);
+    transform: scale(0.8) rotate(5deg);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, rotate 0.5s ease-in-out;
+}
+
+.popup-overlay.active .popup-content {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    animation: popIn 0.5s ease-in-out;
+}
+
+.popup-overlay.closing .popup-content {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.popup-overlay.closing {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.popup-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-in-out 0.2s, transform 0.4s ease-in-out 0.2s;
+}
+
+.popup-overlay.active .popup-content h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-content h2 span {
+    color: var(--primary);
+}
+
+.popup-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #666;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-in-out 0.3s, transform 0.4s ease-in-out 0.3s;
+}
+
+.popup-overlay.active .popup-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-content .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-in-out 0.4s, transform 0.4s ease-in-out 0.4s;
+}
+
+.popup-overlay.active .popup-content .price {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-content .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999;
+}
+
+.popup-content .btn-solid {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-in-out 0.5s, transform 0.4s ease-in-out 0.5s;
+}
+
+.popup-overlay.active .popup-content .btn-solid {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-content .btn-solid:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--dark);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.popup-close:hover {
+    color: var(--primary);
+    transform: rotate(90deg);
+}
+
+/* Animations */
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8) rotate(5deg); opacity: 0; }
+    70% { transform: scale(1.05) rotate(-2deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .popup-content p {
+        font-size: 1rem;
+    }
+
+    .popup-content .price {
+        font-size: 1.3rem;
+    }
+}
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        .footer-col form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            margin-bottom: 20px;
+        }
+        .footer-col form button {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 5px
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-social {
+            display: grid;
+            grid-template-columns: repeat(4, 40px);
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex ;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        .iti.iti--allow-dropdown {
+            width: 100%;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo"><img src="https://georgesnoe.github.io/logo-seic.png">Horizon Vert</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#technology">Technologies</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#training">Formations</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Popup Offer -->
+<div class="popup-overlay" id="popup-overlay">
+    <div class="popup-content">
+        <button class="popup-close" id="popup-close"><i class="fas fa-times"></i></button>
+        <h2>Offre <span>Spéciale</span></h2>
+        <p>Profitez de <strong>10% de réduction</strong> sur notre formule Paiement Comptant !</p>
+        <p class="price">1 980 000 FCFA <span>(au lieu de 2 200 000 FCFA)</span></p>
+        <p>Offre valable jusqu'au <strong>30 juin 2025</strong>.</p>
+        <a href="#contact" class="btn btn-solid">Découvrir l'offre</a>
+    </div>
+</div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1><span style="color:#2ecc71">Horizon vert</span></h1>
+            <h1> vers un avenir durable</h1>
+            <p>Horizon Vert propose une solution innovante pour cultiver des produits hors saison grâce à des serres, réduisant ainsi la dépendance aux importations alimentaires et pelins d'autres choses.</p>
+            <div class="hero-btns">
+                <a href="#technology" class="btn">Découvrir la technologie</a>
+                <a href="#contact" class="btn btn-outline">Nous contacter</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>À propos de <span style="color:#2ecc71">Horizon Vert</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Transformer l'agriculture togolaise</h3>
+                    <p>Horizon Vert est une solution innovante dans le secteur de l'agriculture permettant de cultiver certains produits même en saison défavorable. En saison sèche par exemple, il y a certains produits qui ne sont normalement pas cultivables.</p>
+                    <p>Notre technologie consiste à implanter une sorte de dôme dans lequel la température est régulée pour favoriser la croissance des produits concernés, indépendamment des conditions climatiques extérieures.</p>
+                    <p>Ce projet permettra de réduire significativement le taux d'importation de certains produits alimentaires au Togo, renforçant ainsi notre souveraineté alimentaire et notre économie locale.</p>
+                    
+                    <div class="features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-temperature-low"></i></div>
+                            <div>
+                                <h4>Contrôle climatique</h4>
+                                <p>Régulation précise de la température et de l'humidité</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div>
+                                <h4>Production annuelle</h4>
+                                <p>Culture possible toute l'année, sans saisonnalité</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-tint"></i></div>
+                            <div>
+                                <h4>Économie d'eau</h4>
+                                <p>Jusqu'à 70% d'économie en eau par rapport aux méthodes traditionnelles</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <h4>Rendement accru</h4>
+                                <p>Productivité multipliée par 3 à 5 selon les cultures</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="https://cdn.pixabay.com/photo/2016/04/06/05/17/tomato-1310961_1280.jpg" alt="Agriculture innovante au Togo">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="section technology" id="technology">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos <span>Technologies</span></h2>
+            </div>
+            <div class="tech-container">
+                <div class="tech-card">
+                    <div class="tech-img">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/21/16/05/greenhouse-3247181_1280.jpg" alt="Dôme agricole">
+                    </div>
+                    <div class="tech-content">
+                        <h3>Dômes climatiques</h3>
+                        <p>Nos structures en forme de dôme offrent un environnement contrôlé pour la croissance optimale des plantes. Fabriqués avec des matériaux durables et transparents pour maximiser la lumière naturelle.</p>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-img">
+                        <img src="https://cdn.pixabay.com/photo/2017/02/23/23/24/farm-2093482_1280.jpg" alt="Système de contrôle">
+                    </div>
+                    <div class="tech-content">
+                        <h3>Système de contrôle</h3>
+                        <p>Technologie pour surveiller et ajuster la température, l'humidité, l'irrigation et la nutrition des plantes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos <span>Produits</span></h2>
+                <p>Découvrez les cultures que nous rendons possibles toute l'année</p>
+            </div>
+            <div class="products-container">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://cdn.pixabay.com/photo/2015/07/01/10/27/greenhouse-827464_1280.jpg" alt="Tomates">
+                    </div>
+                    <div class="product-content">
+                        <h3>Serres agricoles en plexiglace</h3>
+                        <p>Variétés locales et hybrides, production continue toute l'année</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://th.bing.com/th/id/R.b15c831180ea33201fa735aeec1f02cc?rik=S1f8AaJqM72Vug&pid=ImgRaw&r=0" alt="Piments">
+                    </div>
+                    <div class="product-content">
+                        <h3>Serres agricoles en baches</h3>
+                        <p>Piments verts, rouges et jaunes de haute qualité</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Témoignages</h2>
+                <p>Ce que disent nos partenaires et bénéficiaires</p>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-text">
+                        Grâce à Horizon Vert, je peux maintenant cultiver des tomates même pendant la saison sèche. Ma production a triplé et mes revenus ont considérablement augmenté.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://cdn.pixabay.com/photo/2019/09/10/12/13/working-4465967_1280.jpg" alt="KOMOU Aziella">
+                        </div>
+                        <div class="author-info">
+                            <h4>KOMOU Aziella</h4>
+                            <p>Agronome, Région des Plateaux</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-text">
+                        La technologie des dômes climatiques a révolutionné notre approvisionnement en légumes frais. Nous pouvons maintenant offrir à nos clients des produits locaux de qualité toute l'année.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/18/16/17/man-1835599_1280.jpg" alt="AMEZOUAME Koffi Daniel">
+                        </div>
+                        <div class="author-info">
+                            <h4>AMEZOUAME Koffi Daniel</h4>
+                            <p>Gérant deferme agricole, Lomé</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-text">
+                        En tant qu'agronome, je suis impressionné par l'efficacité des systèmes de Serre Agro. C'est exactement le genre d'innovation dont l'agriculture togolaise a besoin pour se développer.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/02/59/girl-1866959_1280.jpg" alt="WANNOU Félicia">
+                        </div>
+                        <div class="author-info">
+                            <h4>WANNOU Félicia</h4>
+                            <p>Agronome, Université de Lomé</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+<section class="section faq" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2>Questions <span>Fréquentes</span></h2>
+            <p>Tout ce que vous devez savoir sur Horizon Vert et nos solutions</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Qu'est-ce qu'Horizon Vert et comment fonctionne-t-il ?</h3>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Horizon Vert est une solution agricole innovante qui utilise des dômes climatiques pour cultiver des produits hors saison. Nos serres contrôlent la température, l'humidité et l'irrigation pour garantir une production continue toute l'année, réduisant ainsi la dépendance aux importations alimentaires.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Quels types de cultures puis-je cultiver avec vos serres ?</h3>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nos serres permettent de cultiver une large gamme de produits, y compris des tomates, des piments, des légumes verts et d'autres cultures adaptées au climat togolais. Contactez-nous pour une liste complète ou des recommandations personnalisées.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Quelle est la différence entre les serres en plexiglas et en bâches ?</h3>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Les serres en plexiglas offrent une meilleure durabilité et isolation thermique, idéales pour des conditions climatiques extrêmes. Les serres en bâches sont plus économiques et faciles à installer, parfaites pour les petits agriculteurs. Les deux options garantissent un contrôle climatique efficace.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Proposez-vous une formation pour utiliser vos technologies ?</h3>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, nous offrons une formation complète pour l'installation, l'utilisation et la maintenance de nos serres et systèmes de contrôle. Une assistance technique est également incluse dans certaines formules de paiement.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Comment puis-je financer l'achat d'une serre ?</h3>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nous proposons trois formules de paiement : un paiement comptant avec une réduction, un paiement en 6 mois avec des avantages, ou un paiement en 24 mois pour des mensualités légères. Consultez notre section <a href="#pricing">Tarification</a> pour plus de détails.</p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-cta text-center">
+            <p>Vous avez d'autres questions ?</p>
+            <a href="#contact" class="btn btn-solid">Contactez-nous</a>
+        </div>
+    </div>
+</section>
+    <section class="pricing-section section" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos <span>Formules </span></h2>
+                <p>Choisissez la formule qui correspond à votre situation financière</p>
+            </div>
+    
+            <div class="pricing-cards">
+                <!-- Option 1 - Paiement Cash -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Paiement Comptant</h3>
+                        <div class="price">2.200.000 FCFA</div>
+                        <div class="savings">Économisez 200.000 FCFA</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Paiement unique</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Installation immédiate</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Kit d'irrigation offert</span>
+                        </div>
+                    </div>
+                    <div class="pricing-benefits">
+                        <div class="benefit-card client">
+                            <h4><i class="fas fa-user-tie"></i> Avantage Client</h4>
+                            <p>Réduction immédiate de 200.000 FCFA</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-solid">Choisir cette option</a>
+                </div>
+    
+                <!-- Option 2 - 6 mois -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Choix Équilibré</div>
+                    <div class="pricing-header">
+                        <h3>Paiement en 6 mois</h3>
+                        <div class="price">390.000 FCFA<span>/mois</span></div>
+                        <div class="savings">Économisez 60.000 FCFA</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>6 mensualités</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Première installation gratuite</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Assistance technique incluse</span>
+                        </div>
+                    </div>
+                    <div class="pricing-benefits">
+                        <div class="benefit-card client">
+                            <h4><i class="fas fa-user-tie"></i> Avantage Client</h4>
+                            <p>Réduction immédiate de 60.000 FCFA</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-solid">Choisir cette option</a>
+                </div>
+    
+                <!-- Option 3 - 24 mois -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Paiement en 24 mois</h3>
+                        <div class="price">110.000 FCFA<span>/mois</span></div>
+                        <div class="savings">Mensualités légères</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24 mensualités</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Accès facilité</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Service client premium</span>
+                        </div>
+                    </div>
+                    <div class="pricing-benefits">
+                        <div class="benefit-card client">
+                            <h4><i class="fas fa-user-tie"></i> Avantage Client</h4>
+                            <p>Budget mensuel minimal</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-solid">Choisir cette option</a>
+                </div>
+            </div>
+    
+            <div class="pricing-footer">
+                <p><i class="fas fa-info-circle"></i> Tous nos paiements sont sécurisés et sans frais cachés. Conditions générales disponibles sur demande.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section training" id="training">
+    <div class="container">
+        <div class="section-title">
+            <h2>Nos <span>Formations</span></h2>
+            <p>Apprenez à utiliser et entretenir nos serres</p>
+        </div>
+        <div class="training-container">
+            <div class="training-content">
+                <h3>Formation pratique</h3>
+                <p>Nos formations vous apprennent à utiliser nos serres (plexiglas ou bâches) et à les entretenir pour une production optimale toute l'année.</p>
+                <ul class="training-features">
+                    <li><i class="fas fa-check-circle"></i> Gestion des dômes climatiques</li>
+                    <li><i class="fas fa-check-circle"></i> Entretien des équipements</li>
+                    <li><i class="fas fa-check-circle"></i> Techniques d'optimisation</li>
+                </ul>
+            </div>
+            <div class="training-form-container">
+                <h3>Inscription</h3>
+                <form action="https://formspree.io/f/mvgkvndq" method="POST" class="training-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="training-phone" name="phone" placeholder="Votre téléphone" required>
+                        <span id="training-error-msg" style="color: red; display: none;"></span>
+                    </div>
+                    <div class="form-group">
+                        <select name="training_type" required>
+                            <option value="" disabled selected>Type de formation</option>
+                            <option value="Utilisation des serres">Utilisation des serres</option>
+                            <option value="Entretien des équipements">Entretien des équipements</option>
+                            <option value="Optimisation de la production">Optimisation de la production</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="_subject" value="Inscription à une formation Horizon Vert">
+                    <input type="hidden" name="_next" value="https://votresite.com/merci.html">
+                    <button type="submit" class="btn btn-solid">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-<span>nous</span></h2>
+                <p>Nous sommes à votre disposition pour toute information</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Parlons de votre projet agricole</h3>
+                    <p>Que vous soyez un agriculteur individuel, une coopérative ou une institution intéressée par notre 
+                        technologie, notre équipe est prête à vous accompagner.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Bê Kpota, Lomé, Togo</p>
+                            </div> 
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+228 91 12 14 51</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>horizonvert@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/tonprofil" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/tonprofil" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/tonprofil" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/tonprofil" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/22871791460" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@oscar_26_mars?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+                      </div>
+                      
+                </div>
+                <form action="https://formspree.io/f/mvgkvndq" method="POST" class="contact-form">
+                    <!-- Vos champs -->
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone">
+                        <span id="error-msg" style="color: red; display: none;"></span>                    
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Votre message" required></textarea>
+                    </div>
+                    <input type="hidden" name="_next" value="https://votresite.com/merci.html">
+
+                    <button type="submit" class="btn">Envoyer le message</button>
+                </form>
+   <!-- Ajoutez ce champ caché pour le sujet -->
+   <input type="hidden" name="_subject" value="Nouveau message du site">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Horizon Vert</h3>
+                    <p>Innovation technologique au service de l'agriculture togolaise pour une souveraineté alimentaire renforcée.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/tonprofil" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/tonprofil" target="_blank"><i class="fab fa-twitter"></i></a> <!-- Correction ici -->
+                        <a href="https://www.instagram.com/tonprofil" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@tonprofil" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/22871791460" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/tonprofil" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@oscar_26_mars?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="tel:+22890000000"><i class="fas fa-phone"></i></a>
+                      </div>
+                      
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#technology">Technologie</a></li>
+                        <li><a href="#products">Produits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#training">Formations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Produits</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Serre en plexiglaces</a></li>
+                        <li><a href="#">serre en baches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Abonnez-vous pour recevoir nos dernières actualités et offres.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" class="btn">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Horizon Vert. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js"></script>    
+    <script>
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Testimonial slider
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialNavs = document.querySelectorAll('.testimonial-nav span');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            testimonialSlides.forEach(slide => slide.classList.remove('active'));
+            testimonialNavs.forEach(nav => nav.classList.remove('active'));
+            
+            testimonialSlides[index].classList.add('active');
+            testimonialNavs[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        testimonialNavs.forEach((nav, index) => {
+            nav.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Auto slide change
+        setInterval(() => {
+            let nextSlide = (currentSlide + 1) % testimonialSlides.length;
+            showSlide(nextSlide);
+        }, 5000);
+    
+        
+        window.addEventListener('scroll', animateStats);
+        
+        // Animation on scroll
+        const animateElements = document.querySelectorAll('.about-content, .tech-card, .product-card, .contact-container');
+        
+        function animateOnScroll() {
+            animateElements.forEach(element => {
+                const elementTop = element.offsetTop;
+                const elementHeight = element.offsetHeight;
+                const scrollPosition = window.scrollY + window.innerHeight;
+                
+                if (scrollPosition > elementTop + elementHeight / 3) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Initialize elements as invisible
+        animateElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        
+        const phoneInput = document.querySelector("#phone");
+    const errorMsg = document.querySelector("#error-msg");
+    const form = document.querySelector("#phone-form");
+
+    // Initialisation de intl-tel-input (pays spécifiques)
+    const iti = window.intlTelInput(phoneInput, {
+      initialCountry: "tg", // Togo par défaut
+      onlyCountries: ["tg", "bj", "gh", "bf"], // Togo, Bénin, Ghana, Burkina Faso
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.9/js/utils.js",
+    });
+
+    // Blocage dynamique en fonction du pays
+    phoneInput.addEventListener("input", (e) => {
+      const countryCode = iti.getSelectedCountryData().iso2;
+      const maxLength = getMaxLengthForCountry(countryCode);
+      
+      // Supprimer les caractères non-numériques et tronquer si nécessaire
+      const cleanedValue = e.target.value.replace(/\D/g, "").slice(0, maxLength);
+      e.target.value = formatPhone(cleanedValue, countryCode);
+    });
+
+    // Fonction pour formater le numéro (espaces/tirets)
+    function formatPhone(rawNumber, countryCode) {
+      if (countryCode === "tg" || countryCode === "bj") {
+        // Togo & Bénin : +228 90 12 34 56 → 8 chiffres
+        return rawNumber.replace(/(\d{2})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4");
+      } else if (countryCode === "gh") {
+        // Ghana : +233 20 123 4567 → 9 chiffres
+        return rawNumber.replace(/(\d{2})(\d{3})(\d{4})/, "$1 $2 $3");
+      } else if (countryCode === "bf") {
+        // Burkina Faso : +226 70 12 34 56 → 8 chiffres
+        return rawNumber.replace(/(\d{2})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4");
+      }
+      return rawNumber;
+    }
+
+    // Longueurs maximales par pays (sans indicatif)
+    function getMaxLengthForCountry(countryCode) {
+      const rules = {
+        "tg": 8,  // Togo: 8 chiffres (ex: 90 12 34 56)
+        "bj": 8,  // Bénin: 8 chiffres
+        "gh": 9,  // Ghana: 9 chiffres (ex: 20 123 4567)
+        "bf": 8,  // Burkina Faso: 8 chiffres
+      };
+      return rules[countryCode];
+    }
+
+    // Validation finale
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (iti.isValidNumber()) {
+        alert("Numéro valide ! Pays : " + iti.getSelectedCountryData().name);
+        // Soumettre le formulaire ici
+      } else {
+        errorMsg.textContent = "Numéro invalide pour " + iti.getSelectedCountryData().name + " !";
+        errorMsg.style.display = "block";
+      }
+    });
+
+
+    document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours...';
+        
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+            
+            if (response.ok) {
+                alert('Message envoyé avec succès !');
+                form.reset();
+            } else {
+                throw new Error('Erreur lors de l\'envoi');
+            }
+        } catch (error) {
+            alert('Une erreur est survenue. Veuillez réessayer.');
+            console.error(error);
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Envoyer le message';
+        }
+    });
+
+     
+    </script>
+    <script>
+    // FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all FAQ items
+        faqItems.forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+        
+        // Open the clicked item if it wasn't already active
+        if (!isActive) {
+            item.classList.add('active');
+            const answer = item.querySelector('.faq-answer');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+    });
+});
+</script>
+<script>
+    // Phone Input Initialization with Error Handling
+function initializePhoneInputs() {
+    if (typeof window.intlTelInput !== 'function') {
+        console.error('intlTelInput is not loaded. Please check the script source and network connectivity.');
+        return;
+    }
+
+    // Contact Form Phone Input
+    const phoneInput = document.querySelector("#phone");
+    const errorMsg = document.querySelector("#error-msg");
+
+    if (phoneInput) {
+        const iti = window.intlTelInput(phoneInput, {
+            initialCountry: "tg",
+            onlyCountries: ["tg", "bj", "gh", "bf"],
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.min.js",
+        });
+
+        phoneInput.addEventListener("input", (e) => {
+            const countryCode = iti.getSelectedCountryData().iso2;
+            const maxLength = getMaxLengthForCountry(countryCode);
+            const cleanedValue = e.target.value.replace(/\D/g, "").slice(0, maxLength);
+            e.target.value = formatPhone(cleanedValue, countryCode);
+        });
+
+        document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!iti.isValidNumber()) {
+                errorMsg.textContent = "Numéro invalide pour " + iti.getSelectedCountryData().name + " !";
+                errorMsg.style.display = "block";
+                return;
+            }
+
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    alert('Message envoyé avec succès !');
+                    form.reset();
+                    errorMsg.style.display = "none";
+                } else {
+                    throw new Error('Erreur lors de l\'envoi');
+                }
+            } catch (error) {
+                alert('Une erreur est survenue. Veuillez réessayer.');
+                console.error(error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer le message';
+            }
+        });
+    }
+
+    // Training Form Phone Input
+    const trainingPhoneInput = document.querySelector("#training-phone");
+    const trainingErrorMsg = document.querySelector("#training-error-msg");
+
+    if (trainingPhoneInput) {
+        const trainingIti = window.intlTelInput(trainingPhoneInput, {
+            initialCountry: "tg",
+            onlyCountries: ["tg", "bj", "gh", "bf"],
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.min.js",
+        });
+
+        trainingPhoneInput.addEventListener("input", (e) => {
+            const countryCode = trainingIti.getSelectedCountryData().iso2;
+            const maxLength = getMaxLengthForCountry(countryCode);
+            const cleanedValue = e.target.value.replace(/\D/g, "").slice(0, maxLength);
+            e.target.value = formatPhone(cleanedValue, countryCode);
+        });
+
+        document.querySelector('.training-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!trainingIti.isValidNumber()) {
+                trainingErrorMsg.textContent = "Numéro invalide pour " + trainingIti.getSelectedCountryData().name + " !";
+                trainingErrorMsg.style.display = "block";
+                return;
+            }
+
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    alert('Inscription envoyée avec succès !');
+                    form.reset();
+                    trainingErrorMsg.style.display = "none";
+                } else {
+                    throw new Error('Erreur lors de l\'envoi');
+                }
+            } catch (error) {
+                alert('Une erreur est survenue. Veuillez réessayer.');
+                console.error(error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'S\'inscrire';
+            }
+        });
+    }
+}
+
+function formatPhone(rawNumber, countryCode) {
+    if (countryCode === "tg" || countryCode === "bj") {
+        return rawNumber.replace(/(\d{2})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4");
+    } else if (countryCode === "gh") {
+        return rawNumber.replace(/(\d{2})(\d{3})(\d{4})/, "$1 $2 $3");
+    } else if (countryCode === "bf") {
+        return rawNumber.replace(/(\d{2})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4");
+    }
+    return rawNumber;
+}
+
+function getMaxLengthForCountry(countryCode) {
+    const rules = {
+        "tg": 8,
+        "bj": 8,
+        "gh": 9,
+        "bf": 8,
+    };
+    return rules[countryCode];
+}
+
+// Animation for Training Section
+const trainingSection = document.querySelector('.training');
+if (trainingSection) {
+    trainingSection.style.opacity = '0';
+    trainingSection.style.transform = 'translateY(30px)';
+    trainingSection.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+    function animateTrainingSection() {
+        const sectionTop = trainingSection.offsetTop;
+        const sectionHeight = trainingSection.offsetHeight;
+        const scrollPosition = window.scrollY + window.innerHeight;
+
+        if (scrollPosition > sectionTop + sectionHeight / 3) {
+            trainingSection.style.opacity = '1';
+            trainingSection.style.transform = 'translateY(0)';
+        }
+    }
+
+    window.addEventListener('scroll', animateTrainingSection);
+    window.addEventListener('load', animateTrainingSection);
+}
+
+    </script>
+    <script>
+        // Popup Offer
+document.addEventListener('DOMContentLoaded', () => {
+    const popupOverlay = document.querySelector('#popup-overlay');
+    const popupClose = document.querySelector('#popup-close');
+    const popupCTA = document.querySelector('.popup-content .btn-solid');
+
+    // Check if popup has been shown in this session
+    if (!sessionStorage.getItem('popupShown')) {
+        setTimeout(() => {
+            popupOverlay.classList.add('active');
+            sessionStorage.setItem('popupShown', 'true');
+        }, 1000); // Show after 1 second delay
+    }
+
+    // Function to close popup with animation
+    const closePopup = () => {
+        popupOverlay.classList.add('closing');
+        setTimeout(() => {
+            popupOverlay.classList.remove('active', 'closing');
+        }, 300); // Match the CSS transition duration
+    };
+
+    // Close popup on button click
+    popupClose.addEventListener('click', closePopup);
+
+    // Close popup on overlay click
+    popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+            closePopup();
+        }
+    });
+
+    // Close popup and scroll to pricing when clicking the CTA
+    popupCTA.addEventListener('click', (e) => {
+        e.preventDefault();
+        popupOverlay.classList.add('closing');
+        setTimeout(() => {
+            popupOverlay.classList.remove('active', 'closing');
+            const target = document.querySelector('#pricing');
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }, 300); // Match the CSS transition duration
+    });
+});
+    
+    </script>
+</body>
+</html>
